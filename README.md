@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Uniso Flow
 
-## Getting Started
+### Gestão estratégica de fluxo acadêmico e equilíbrio de turmas para a Uniso.
 
-First, run the development server:
+O Uniso Flow é uma ferramenta desenvolvida para transformar o gerenciamento manual de turmas em um painel inteligente de controle. O sistema automatiza a previsão de demanda de alunos por disciplina, auxiliando a coordenação a equilibrar a ocupação das salas e evitar gargalos de matrícula.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## O Problema
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+A organização baseada exclusivamente em planilhas estáticas enfrenta desafios como:
 
-## Learn More
+* **Falta de Previsibilidade:** Dificuldade em projetar quantos alunos estarão aptos para uma matéria antes do período de matrícula.
 
-To learn more about Next.js, take a look at the following resources:
+* **Desequilíbrio de Turmas:** Disciplinas com demanda muito superior à capacidade física, enquanto outras permanecem ociosas.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Gestão de Dependências (DPs):** Complexidade em rastrear e alocar alunos que precisam cursar matérias pendentes em horários especiais.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Objetivos
 
-## Deploy on Vercel
+1. **Previsão de Demanda:** Identificar o número real de alunos aptos para cada disciplina com base no histórico de materias concluidas.
+2. **Equilíbrio de Carga:** Auxiliar na distribuição eficiente de alunos entre as turmas e horários disponíveis.
+3. **Visibilidade de Fluxo:** Proporciontar uma visão clara e em tempo real do fluxo acadêmico, permitindo identificar gargalos, ociosidade de salas e oportunidades de rebalanceamento.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tecnologias
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* **Interface:** Next.js e Tailwind CSS.
+* **Arquitetura:** Suporte para uso via navegador ou como aplicação nativa (Tauri).
+
+## Funcionamento
+
+1. **Importação:** O sistema processa os dados das planilhas de histórico e matriz curricular atuais.
+2. **Processamento:** Um algoritmo cruza o progresso individual dos alunos com as regras de pré-requisitos do curso.
+3. **Diagnóstico:** O painel exibe relatórios visuais de ocupação e sugere a quantidade ideal de turmas para o próximo semestre.
+
+---
+
+## Desenvolvido por
+
+**Renan** – [renanrdemeneses@gmail.com](mailto:renanrdemeneses@gmail.com)
+
+**Pedro** – [percels815@gmail.com](mailto:percels815@gmail.com)
+
+**Gabriel** – [gabrielch.anzolini@gmail.com](mailto:gabrielch.anzolini@gmail.com)
