@@ -1,64 +1,48 @@
-export default function Home() {
-	const cursos = [
-		'Administração',
-		'Análise e Desenvolvimento de Sistemas',
-		'Arquitetura e Urbanismo',
-		'Artes Visuais',
-		'Biomedicina',
-		'Ciência da Computação',
-		'Ciência de Dados e Inteligência Artificial',
-		'Ciências Biológicas (Bacharelado)',
-		'Ciências Contábeis',
-		'Ciências Econômicas',
-		'Comércio Exterior',
-		'Design',
-		'Direito',
-		'Educação Física',
-		'Enfermagem',
-		'Engenharia Agronômica',
-		'Engenharia Civil',
-		'Engenharia da Computação',
-		'Engenharia de Controle e Automação',
-		'Engenharia de Produção',
-		'Engenharia Elétrica',
-		'Engenharia Mecânica',
-		'Engenharia Química',
-		'Estética e Cosmética',
-		'Farmácia',
-		'Filosofia (Bacharelado)',
-		'Fisioterapia',
-		'Fonoaudiologia',
-		'Gastronomia',
-		'Gestão Comercial',
-		'Gestão de Equinocultura',
-		'Gestão de Recursos Humanos',
-		'Gestão Financeira',
-		'História',
-		'Jogos Digitais',
-		'Jornalismo',
-		'Logística',
-		'Marketing',
-		'Medicina Veterinária',
-		'Moda',
-		'Nutrição',
-		'Odontologia',
-		'Pedagogia',
-		'Pedagogia (integral)',
-		'Processos Gerenciais',
-		'Psicologia',
-		'Publicidade e Propaganda',
-		'Relações Internacionais',
-		'Relações Públicas',
-		'Terapia Ocupacional',
-	];
+import { promises as fs } from 'fs';
+import path from 'path';
+
+type Curso = {
+	codigo: string;
+	nome: string;
+	semestre: string;
+	totalAlunos: number;
+	disciplinasAtivas: number;
+	capacidadeTotal: number;
+};
+
+type MockData = {
+	cursos: Curso[];
+};
+
+async function getMockData(): Promise<MockData> {
+	const filePath = path.join(process.cwd(), 'data', 'mock-data.json');
+	const file = await fs.readFile(filePath, 'utf-8');
+	return JSON.parse(file) as MockData;
+}
+
+export default async function Home() {
+	const data = await getMockData();
+
 	return (
-		<main>
-			<h1 className="text-2xl">Lista de Cursos</h1>
-			<ul>
-				{cursos.map((curso, index) => (
-					<li key={index}>{curso}</li>
+		<main className="p-6">
+			<h1 className="text-2xl font-bold">Uniso Flow</h1>
+			<p className="mt-1 text-sm text-gray-600">Selecione um curso para visualizar o fluxo acadêmico</p>
+
+			<section className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+				{data.cursos.map(curso => (
+					<article key={curso.codigo} className="rounded-lg border p-4 shadow-sm">
+						<h2 className="text-lg font-semibold">{curso.nome}</h2>
+						<p className="text-sm text-gray-600">Código: {curso.codigo}</p>
+						<p className="text-sm text-gray-600">Semestre: {curso.semestre}</p>
+
+						<div className="mt-3 space-y-1 text-sm">
+							<p>Total de alunos: {curso.totalAlunos}</p>
+							<p>Disciplinas ativas: {curso.disciplinasAtivas}</p>
+							<p>Capacidade total: {curso.capacidadeTotal}</p>
+						</div>
+					</article>
 				))}
-			</ul>
+			</section>
 		</main>
 	);
 }

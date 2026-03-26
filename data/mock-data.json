@@ -1,0 +1,28 @@
+{
+    "cursos": [
+        {
+            "codigo": "CCO",
+            "nome": "Ciência da Computação",
+            "semestre": "2026/1",
+            "totalAlunos": 120,
+            "disciplinasAtivas": 32,
+            "capacidadeTotal": 180
+        },
+        {
+            "codigo": "ADS",
+            "nome": "Análise e Desenvolvimento de Sistemas",
+            "semestre": "2026/1",
+            "totalAlunos": 95,
+            "disciplinasAtivas": 24,
+            "capacidadeTotal": 140
+        },
+        {
+            "codigo": "ENG",
+            "nome": "Engenharia de Software",
+            "semestre": "2026/1",
+            "totalAlunos": 88,
+            "disciplinasAtivas": 27,
+            "capacidadeTotal": 130
+        }
+    ]
+}
