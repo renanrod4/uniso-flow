@@ -1,18 +1,6 @@
 import { promises as fs } from 'fs';
 import path from 'path';
-
-type Curso = {
-	codigo: string;
-	nome: string;
-	semestre: string;
-	totalAlunos: number;
-	disciplinasAtivas: number;
-	capacidadeTotal: number;
-};
-
-type MockData = {
-	cursos: Curso[];
-};
+import type { MockData } from '@/types/mock-data';
 
 async function getMockData(): Promise<MockData> {
 	const filePath = path.join(process.cwd(), 'data', 'mock-data.json');
@@ -30,15 +18,18 @@ export default async function Home() {
 
 			<section className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 				{data.cursos.map(curso => (
-					<article key={curso.codigo} className="rounded-lg border p-4 shadow-sm">
+					<article key={curso.id} className="rounded-lg border p-4 shadow-sm">
 						<h2 className="text-lg font-semibold">{curso.nome}</h2>
-						<p className="text-sm text-gray-600">Código: {curso.codigo}</p>
-						<p className="text-sm text-gray-600">Semestre: {curso.semestre}</p>
+						<p className="text-sm text-gray-600">ID: {curso.id}</p>
+						<p className="text-sm text-gray-600">Coordenador: {curso.coordenador}</p>
+						<p className="text-sm text-gray-600">Turno: {curso.turno}</p>
 
 						<div className="mt-3 space-y-1 text-sm">
 							<p>Total de alunos: {curso.totalAlunos}</p>
-							<p>Disciplinas ativas: {curso.disciplinasAtivas}</p>
-							<p>Capacidade total: {curso.capacidadeTotal}</p>
+							<p>Total de disciplinas: {curso.totalDisciplinas}</p>
+							<p>Taxa de ocupação: {curso.taxaOcupacao}%</p>
+							<p>Alertas ativos: {curso.alertas}</p>
+							<p>Duração: {curso.semestres} semestres</p>
 						</div>
 					</article>
 				))}

@@ -1,28 +1,413 @@
 {
     "cursos": [
         {
-            "codigo": "CCO",
+            "id": "ciencia-computacao",
             "nome": "Ciência da Computação",
-            "semestre": "2026/1",
-            "totalAlunos": 120,
-            "disciplinasAtivas": 32,
-            "capacidadeTotal": 180
+            "coordenador": "Prof. Dr. Renan Meneses",
+            "totalAlunos": 1247,
+            "totalDisciplinas": 48,
+            "taxaOcupacao": 78,
+            "alertas": 5,
+            "turno": "Noturno",
+            "semestres": 8,
+            "alunosPorSemestre": [
+                {
+                    "semestre": "1o Sem",
+                    "alunos": 180
+                },
+                {
+                    "semestre": "2o Sem",
+                    "alunos": 165
+                },
+                {
+                    "semestre": "3o Sem",
+                    "alunos": 158
+                },
+                {
+                    "semestre": "4o Sem",
+                    "alunos": 172
+                },
+                {
+                    "semestre": "5o Sem",
+                    "alunos": 148
+                },
+                {
+                    "semestre": "6o Sem",
+                    "alunos": 155
+                },
+                {
+                    "semestre": "7o Sem",
+                    "alunos": 140
+                },
+                {
+                    "semestre": "8o Sem",
+                    "alunos": 129
+                }
+            ],
+            "disciplinas": [
+                {
+                    "nome": "Estrutura de Dados",
+                    "semestre": 3,
+                    "prereq": "Algoritmos",
+                    "demanda": 92,
+                    "capacidade": 80,
+                    "status": "critico"
+                },
+                {
+                    "nome": "Banco de Dados",
+                    "semestre": 4,
+                    "prereq": "Estrutura de Dados",
+                    "demanda": 75,
+                    "capacidade": 80,
+                    "status": "ok"
+                },
+                {
+                    "nome": "Engenharia de Software",
+                    "semestre": 5,
+                    "prereq": "Banco de Dados",
+                    "demanda": 88,
+                    "capacidade": 80,
+                    "status": "atencao"
+                },
+                {
+                    "nome": "Redes de Computadores",
+                    "semestre": 5,
+                    "prereq": "-",
+                    "demanda": 45,
+                    "capacidade": 80,
+                    "status": "ocioso"
+                }
+            ],
+            "turmas": [
+                {
+                    "disc": "Estrutura de Dados",
+                    "turma": "A",
+                    "horario": "Seg/Qua 19:00",
+                    "sala": "Lab 3",
+                    "cap": 40,
+                    "mat": 46,
+                    "prof": "Dr. Silva"
+                },
+                {
+                    "disc": "Estrutura de Dados",
+                    "turma": "B",
+                    "horario": "Ter/Qui 19:00",
+                    "sala": "Lab 4",
+                    "cap": 40,
+                    "mat": 46,
+                    "prof": "Dr. Santos"
+                },
+                {
+                    "disc": "Banco de Dados",
+                    "turma": "A",
+                    "horario": "Seg/Qua 21:00",
+                    "sala": "Lab 2",
+                    "cap": 40,
+                    "mat": 38,
+                    "prof": "Dra. Lima"
+                }
+            ],
+            "alertasList": [
+                {
+                    "msg": "Estrutura de Dados excede capacidade em 15%",
+                    "type": "critico"
+                },
+                {
+                    "msg": "Engenharia de Software proxima do limite",
+                    "type": "atencao"
+                },
+                {
+                    "msg": "Redes de Computadores com baixa ocupacao",
+                    "type": "ocioso"
+                }
+            ],
+            "sugestoes": [
+                "Abrir segunda turma de Estrutura de Dados",
+                "Criar turma especial de DP para Banco de Dados"
+            ]
         },
         {
-            "codigo": "ADS",
-            "nome": "Análise e Desenvolvimento de Sistemas",
-            "semestre": "2026/1",
-            "totalAlunos": 95,
-            "disciplinasAtivas": 24,
-            "capacidadeTotal": 140
-        },
-        {
-            "codigo": "ENG",
+            "id": "engenharia-software",
             "nome": "Engenharia de Software",
-            "semestre": "2026/1",
-            "totalAlunos": 88,
-            "disciplinasAtivas": 27,
-            "capacidadeTotal": 130
+            "coordenador": "Profa. Dra. Ana Beatriz",
+            "totalAlunos": 890,
+            "totalDisciplinas": 42,
+            "taxaOcupacao": 82,
+            "alertas": 3,
+            "turno": "Noturno",
+            "semestres": 8,
+            "alunosPorSemestre": [
+                {
+                    "semestre": "1o Sem",
+                    "alunos": 140
+                },
+                {
+                    "semestre": "2o Sem",
+                    "alunos": 130
+                },
+                {
+                    "semestre": "3o Sem",
+                    "alunos": 125
+                },
+                {
+                    "semestre": "4o Sem",
+                    "alunos": 118
+                },
+                {
+                    "semestre": "5o Sem",
+                    "alunos": 105
+                },
+                {
+                    "semestre": "6o Sem",
+                    "alunos": 98
+                },
+                {
+                    "semestre": "7o Sem",
+                    "alunos": 92
+                },
+                {
+                    "semestre": "8o Sem",
+                    "alunos": 82
+                }
+            ],
+            "disciplinas": [
+                {
+                    "nome": "Requisitos de Software",
+                    "semestre": 3,
+                    "prereq": "Logica",
+                    "demanda": 70,
+                    "capacidade": 60,
+                    "status": "atencao"
+                },
+                {
+                    "nome": "Arquitetura de Software",
+                    "semestre": 4,
+                    "prereq": "Requisitos",
+                    "demanda": 55,
+                    "capacidade": 60,
+                    "status": "ok"
+                },
+                {
+                    "nome": "Testes de Software",
+                    "semestre": 5,
+                    "prereq": "Arquitetura",
+                    "demanda": 62,
+                    "capacidade": 60,
+                    "status": "atencao"
+                },
+                {
+                    "nome": "Gestao de Projetos",
+                    "semestre": 5,
+                    "prereq": "-",
+                    "demanda": 72,
+                    "capacidade": 60,
+                    "status": "critico"
+                }
+            ],
+            "turmas": [
+                {
+                    "disc": "Requisitos de Software",
+                    "turma": "A",
+                    "horario": "Seg/Qua 19:00",
+                    "sala": "Sala 201",
+                    "cap": 60,
+                    "mat": 70,
+                    "prof": "Dr. Ramos"
+                },
+                {
+                    "disc": "Gestao de Projetos",
+                    "turma": "A",
+                    "horario": "Ter/Qui 19:00",
+                    "sala": "Sala 205",
+                    "cap": 60,
+                    "mat": 72,
+                    "prof": "Dra. Campos"
+                }
+            ],
+            "alertasList": [
+                {
+                    "msg": "Gestao de Projetos excede capacidade em 20%",
+                    "type": "critico"
+                },
+                {
+                    "msg": "Requisitos de Software proxima do limite",
+                    "type": "atencao"
+                }
+            ],
+            "sugestoes": [
+                "Abrir segunda turma de Gestao de Projetos",
+                "Ampliar sala de Requisitos de Software"
+            ]
+        },
+        {
+            "id": "sistemas-informacao",
+            "nome": "Sistemas de Informacao",
+            "coordenador": "Prof. Dr. Carlos Eduardo",
+            "totalAlunos": 720,
+            "totalDisciplinas": 40,
+            "taxaOcupacao": 65,
+            "alertas": 2,
+            "turno": "Noturno",
+            "semestres": 8,
+            "alunosPorSemestre": [
+                {
+                    "semestre": "1o Sem",
+                    "alunos": 115
+                },
+                {
+                    "semestre": "2o Sem",
+                    "alunos": 108
+                },
+                {
+                    "semestre": "3o Sem",
+                    "alunos": 100
+                },
+                {
+                    "semestre": "4o Sem",
+                    "alunos": 95
+                },
+                {
+                    "semestre": "5o Sem",
+                    "alunos": 85
+                },
+                {
+                    "semestre": "6o Sem",
+                    "alunos": 78
+                },
+                {
+                    "semestre": "7o Sem",
+                    "alunos": 72
+                },
+                {
+                    "semestre": "8o Sem",
+                    "alunos": 67
+                }
+            ],
+            "disciplinas": [
+                {
+                    "nome": "Gestao de TI",
+                    "semestre": 5,
+                    "prereq": "-",
+                    "demanda": 50,
+                    "capacidade": 60,
+                    "status": "ok"
+                },
+                {
+                    "nome": "ERP e CRM",
+                    "semestre": 6,
+                    "prereq": "Gestao de TI",
+                    "demanda": 42,
+                    "capacidade": 60,
+                    "status": "ocioso"
+                },
+                {
+                    "nome": "Business Intelligence",
+                    "semestre": 6,
+                    "prereq": "Banco de Dados",
+                    "demanda": 65,
+                    "capacidade": 60,
+                    "status": "atencao"
+                }
+            ],
+            "turmas": [
+                {
+                    "disc": "Business Intelligence",
+                    "turma": "A",
+                    "horario": "Seg/Qua 19:00",
+                    "sala": "Lab 8",
+                    "cap": 60,
+                    "mat": 65,
+                    "prof": "Dr. Almeida"
+                }
+            ],
+            "alertasList": [
+                {
+                    "msg": "Business Intelligence acima da capacidade",
+                    "type": "atencao"
+                }
+            ],
+            "sugestoes": [
+                "Ampliar turma de Business Intelligence"
+            ]
         }
-    ]
+    ],
+    "alunosPorCurso": {
+        "ciencia-computacao": [
+            {
+                "id": "cc1",
+                "nome": "Ana Clara Silva",
+                "ra": "2024001",
+                "semestre": 1,
+                "cor": "#fff9c4"
+            },
+            {
+                "id": "cc2",
+                "nome": "Bruno Henrique",
+                "ra": "2024002",
+                "semestre": 1,
+                "cor": "#c8e6c9"
+            },
+            {
+                "id": "cc3",
+                "nome": "Carlos Eduardo",
+                "ra": "2024003",
+                "semestre": 2,
+                "cor": "#bbdefb"
+            }
+        ],
+        "engenharia-software": [
+            {
+                "id": "es1",
+                "nome": "Alice Borges",
+                "ra": "2024101",
+                "semestre": 1,
+                "cor": "#fff9c4"
+            },
+            {
+                "id": "es2",
+                "nome": "Bernardo Vieira",
+                "ra": "2024102",
+                "semestre": 2,
+                "cor": "#c8e6c9"
+            }
+        ],
+        "sistemas-informacao": [
+            {
+                "id": "si1",
+                "nome": "Amanda Gomes",
+                "ra": "2024201",
+                "semestre": 1,
+                "cor": "#fff9c4"
+            },
+            {
+                "id": "si2",
+                "nome": "Breno Carvalho",
+                "ra": "2024202",
+                "semestre": 2,
+                "cor": "#c8e6c9"
+            }
+        ]
+    },
+    "statusConfig": {
+        "critico": {
+            "label": "Critico",
+            "color": "#e53935",
+            "bg": "#fce4ec"
+        },
+        "atencao": {
+            "label": "Atencao",
+            "color": "#f5a623",
+            "bg": "#fff8e1"
+        },
+        "ok": {
+            "label": "OK",
+            "color": "#43a047",
+            "bg": "#e8f5e9"
+        },
+        "ocioso": {
+            "label": "Ocioso",
+            "color": "#757575",
+            "bg": "#f5f5f5"
+        }
+    }
 }

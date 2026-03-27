@@ -27,7 +27,7 @@ export default function Sidebar() {
 					<div className="text-sm text-blue-300">Gestão Acadêmica</div>
 				</div>
 			</div>
-			<nav className="flex flex-col gap-2 mt-6 p-3">
+			<nav className="flex flex-col gap-1 mt-6 p-3">
 				{items.map(item => (
 					// Itera sobre os itens do menu e renderiza cada um usando o componente SidebarItem
 					<SidebarItem key={item.label} href={item.href} active={item.active}>
