@@ -17,7 +17,7 @@ const items = [
 
 export default function Sidebar() {
 	return (
-		<aside className="w-78 min-h-screen flex flex-col p-0 pb-8 border-r border-[#23235a] text-white bg-linear-to-b from-[#1a1a5e] to-[#2b3a8e]">
+		<aside className="w-78 min-h-screen flex flex-col p-0 pb-8 border-r border-sidebar-border text-white bg-linear-to-b from-sidebar-start to-sidebar-end">
 			<div className="flex items-center gap-4 px-6 pt-8 pb-6 border-b border-white/10">
 				<div className="bg-white p-1 rounded-md">
 					<Image src="/images/uniso.png" alt="Uniso Flow Logo" width={40} height={40} />
