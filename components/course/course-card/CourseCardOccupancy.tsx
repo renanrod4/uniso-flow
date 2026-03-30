@@ -7,13 +7,26 @@ type CourseCardOccupancyProps = {
 	alertas: number;
 };
 
+function getOccupancyColorClass(percentage: number) {
+	if (percentage >= 90) {
+		return 'bg-occupancy-alert';
+	}
+
+	if (percentage >= 75) {
+		return 'bg-occupancy-warn';
+	}
+
+	return 'bg-occupancy-ok';
+}
+
 export default function CourseCardOccupancy({ taxaOcupacao, turno, semestres, alertas }: CourseCardOccupancyProps) {
 	const taxaNormalizada = Math.min(100, Math.max(0, taxaOcupacao));
+	const occupancyColorClass = getOccupancyColorClass(taxaNormalizada);
 
 	return (
 		<section className="mt-4">
 			<div className="h-2 rounded-full bg-occupancy-track">
-				<div className="h-2 rounded-full bg-occupancy-fill" style={{ width: `${taxaNormalizada}%` }} />
+				<div className={`h-2 rounded-full ${occupancyColorClass}`} style={{ width: `${taxaNormalizada}%` }} />
 			</div>
 
 			<div className="mt-3 flex items-center justify-between gap-2">
