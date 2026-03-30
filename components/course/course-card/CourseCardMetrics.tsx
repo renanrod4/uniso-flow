@@ -39,7 +39,7 @@ export default function CourseCardMetrics({ totalAlunos, totalDisciplinas, taxaO
 				<p className={`text-2xl font-semibold leading-none tracking-tight ${occupancyTextClass}`}>
 					{taxaOcupacao}%
 				</p>
-				<p className="mt-1 text-sm text-slate-400">Ocupacao</p>
+				<p className="mt-1 text-sm text-slate-400">Ocupação</p>
 			</div>
 		</section>
 	);

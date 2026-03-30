@@ -241,7 +241,7 @@
         },
         {
             "id": "sistemas-informacao",
-            "nome": "Sistemas de Informacao",
+            "nome": "Sistemas de Informação",
             "coordenador": "Prof. Dr. Carlos Eduardo",
             "totalAlunos": 720,
             "totalDisciplinas": 40,
@@ -329,6 +329,336 @@
             "sugestoes": [
                 "Ampliar turma de Business Intelligence"
             ]
+        },
+        {
+            "id": "engenharia-civil",
+            "nome": "Engenharia Civil",
+            "coordenador": "Prof. Dr. Marcos Tavares",
+            "totalAlunos": 980,
+            "totalDisciplinas": 52,
+            "taxaOcupacao": 74,
+            "alertas": 4,
+            "turno": "Integral",
+            "semestres": 10,
+            "alunosPorSemestre": [
+                {
+                    "semestre": "1o Sem",
+                    "alunos": 130
+                },
+                {
+                    "semestre": "2o Sem",
+                    "alunos": 122
+                },
+                {
+                    "semestre": "3o Sem",
+                    "alunos": 115
+                },
+                {
+                    "semestre": "4o Sem",
+                    "alunos": 108
+                },
+                {
+                    "semestre": "5o Sem",
+                    "alunos": 100
+                },
+                {
+                    "semestre": "6o Sem",
+                    "alunos": 95
+                },
+                {
+                    "semestre": "7o Sem",
+                    "alunos": 88
+                },
+                {
+                    "semestre": "8o Sem",
+                    "alunos": 80
+                },
+                {
+                    "semestre": "9o Sem",
+                    "alunos": 75
+                },
+                {
+                    "semestre": "10o Sem",
+                    "alunos": 67
+                }
+            ],
+            "disciplinas": [
+                {
+                    "nome": "Resistencia dos Materiais",
+                    "semestre": 3,
+                    "prereq": "Fisica I",
+                    "demanda": 85,
+                    "capacidade": 70,
+                    "status": "critico"
+                },
+                {
+                    "nome": "Mecanica dos Solos",
+                    "semestre": 5,
+                    "prereq": "Resistencia dos Materiais",
+                    "demanda": 60,
+                    "capacidade": 70,
+                    "status": "ok"
+                },
+                {
+                    "nome": "Estruturas de Concreto",
+                    "semestre": 6,
+                    "prereq": "Resistencia dos Materiais",
+                    "demanda": 72,
+                    "capacidade": 70,
+                    "status": "atencao"
+                }
+            ],
+            "turmas": [
+                {
+                    "disc": "Resistencia dos Materiais",
+                    "turma": "A",
+                    "horario": "Seg/Qua 08:00",
+                    "sala": "Sala 401",
+                    "cap": 70,
+                    "mat": 85,
+                    "prof": "Dr. Ferreira"
+                },
+                {
+                    "disc": "Estruturas de Concreto",
+                    "turma": "A",
+                    "horario": "Ter/Qui 10:00",
+                    "sala": "Sala 402",
+                    "cap": 70,
+                    "mat": 72,
+                    "prof": "Dr. Barbosa"
+                }
+            ],
+            "alertasList": [
+                {
+                    "msg": "Resistencia dos Materiais excede capacidade em 21%",
+                    "type": "critico"
+                },
+                {
+                    "msg": "Estruturas de Concreto proxima do limite",
+                    "type": "atencao"
+                },
+                {
+                    "msg": "Topografia com baixa ocupacao",
+                    "type": "ocioso"
+                }
+            ],
+            "sugestoes": [
+                "Abrir segunda turma de Resistencia dos Materiais",
+                "Realocar Topografia para sala menor"
+            ]
+        },
+        {
+            "id": "direito",
+            "nome": "Direito",
+            "coordenador": "Profa. Dra. Juliana Vasconcelos",
+            "totalAlunos": 1580,
+            "totalDisciplinas": 56,
+            "taxaOcupacao": 91,
+            "alertas": 6,
+            "turno": "Matutino / Noturno",
+            "semestres": 10,
+            "alunosPorSemestre": [
+                {
+                    "semestre": "1o Sem",
+                    "alunos": 200
+                },
+                {
+                    "semestre": "2o Sem",
+                    "alunos": 195
+                },
+                {
+                    "semestre": "3o Sem",
+                    "alunos": 182
+                },
+                {
+                    "semestre": "4o Sem",
+                    "alunos": 175
+                },
+                {
+                    "semestre": "5o Sem",
+                    "alunos": 168
+                },
+                {
+                    "semestre": "6o Sem",
+                    "alunos": 155
+                },
+                {
+                    "semestre": "7o Sem",
+                    "alunos": 148
+                },
+                {
+                    "semestre": "8o Sem",
+                    "alunos": 130
+                },
+                {
+                    "semestre": "9o Sem",
+                    "alunos": 118
+                },
+                {
+                    "semestre": "10o Sem",
+                    "alunos": 109
+                }
+            ],
+            "disciplinas": [
+                {
+                    "nome": "Direito Constitucional",
+                    "semestre": 2,
+                    "prereq": "Introducao ao Direito",
+                    "demanda": 190,
+                    "capacidade": 160,
+                    "status": "critico"
+                },
+                {
+                    "nome": "Direito Civil",
+                    "semestre": 3,
+                    "prereq": "Direito Constitucional",
+                    "demanda": 175,
+                    "capacidade": 160,
+                    "status": "atencao"
+                },
+                {
+                    "nome": "Direito Penal",
+                    "semestre": 3,
+                    "prereq": "Introducao ao Direito",
+                    "demanda": 180,
+                    "capacidade": 160,
+                    "status": "critico"
+                }
+            ],
+            "turmas": [
+                {
+                    "disc": "Direito Constitucional",
+                    "turma": "A",
+                    "horario": "Seg/Qua 08:00",
+                    "sala": "Auditorio 1",
+                    "cap": 80,
+                    "mat": 95,
+                    "prof": "Dr. Mendonca"
+                },
+                {
+                    "disc": "Direito Constitucional",
+                    "turma": "B",
+                    "horario": "Seg/Qua 19:00",
+                    "sala": "Auditorio 2",
+                    "cap": 80,
+                    "mat": 95,
+                    "prof": "Dra. Souza"
+                }
+            ],
+            "alertasList": [
+                {
+                    "msg": "Direito Constitucional excede capacidade em 19%",
+                    "type": "critico"
+                },
+                {
+                    "msg": "Direito Penal excede capacidade em 12.5%",
+                    "type": "critico"
+                },
+                {
+                    "msg": "Processo Civil acima da capacidade",
+                    "type": "atencao"
+                }
+            ],
+            "sugestoes": [
+                "Abrir terceira turma de Direito Constitucional",
+                "Abrir segunda turma de Direito Penal"
+            ]
+        },
+        {
+            "id": "administracao",
+            "nome": "Administracao",
+            "coordenador": "Prof. Dr. Roberto Nascimento",
+            "totalAlunos": 1050,
+            "totalDisciplinas": 44,
+            "taxaOcupacao": 71,
+            "alertas": 2,
+            "turno": "Noturno",
+            "semestres": 8,
+            "alunosPorSemestre": [
+                {
+                    "semestre": "1o Sem",
+                    "alunos": 160
+                },
+                {
+                    "semestre": "2o Sem",
+                    "alunos": 152
+                },
+                {
+                    "semestre": "3o Sem",
+                    "alunos": 145
+                },
+                {
+                    "semestre": "4o Sem",
+                    "alunos": 138
+                },
+                {
+                    "semestre": "5o Sem",
+                    "alunos": 125
+                },
+                {
+                    "semestre": "6o Sem",
+                    "alunos": 118
+                },
+                {
+                    "semestre": "7o Sem",
+                    "alunos": 110
+                },
+                {
+                    "semestre": "8o Sem",
+                    "alunos": 102
+                }
+            ],
+            "disciplinas": [
+                {
+                    "nome": "Marketing",
+                    "semestre": 3,
+                    "prereq": "-",
+                    "demanda": 80,
+                    "capacidade": 80,
+                    "status": "ok"
+                },
+                {
+                    "nome": "Gestao de Pessoas",
+                    "semestre": 4,
+                    "prereq": "-",
+                    "demanda": 90,
+                    "capacidade": 80,
+                    "status": "atencao"
+                },
+                {
+                    "nome": "Logistica",
+                    "semestre": 6,
+                    "prereq": "-",
+                    "demanda": 55,
+                    "capacidade": 80,
+                    "status": "ocioso"
+                }
+            ],
+            "turmas": [
+                {
+                    "disc": "Gestao de Pessoas",
+                    "turma": "A",
+                    "horario": "Seg/Qua 19:00",
+                    "sala": "Sala 501",
+                    "cap": 80,
+                    "mat": 90,
+                    "prof": "Dra. Ribeiro"
+                }
+            ],
+            "alertasList": [
+                {
+                    "msg": "Gestao de Pessoas acima da capacidade em 12.5%",
+                    "type": "atencao"
+                },
+                {
+                    "msg": "Logistica com baixa procura",
+                    "type": "ocioso"
+                }
+            ],
+            "sugestoes": [
+                "Ampliar turma de Gestao de Pessoas",
+                "Redistribuir horarios de Logistica"
+            ]
         }
     ],
     "alunosPorCurso": {
@@ -385,6 +715,75 @@
                 "ra": "2024202",
                 "semestre": 2,
                 "cor": "#c8e6c9"
+            }
+        ],
+        "engenharia-civil": [
+            {
+                "id": "ec1",
+                "nome": "Adriana Ferraz",
+                "ra": "2024301",
+                "semestre": 1,
+                "cor": "#fff9c4"
+            },
+            {
+                "id": "ec2",
+                "nome": "Bruno Cardoso",
+                "ra": "2024302",
+                "semestre": 2,
+                "cor": "#c8e6c9"
+            },
+            {
+                "id": "ec3",
+                "nome": "Carla Machado",
+                "ra": "2024303",
+                "semestre": 3,
+                "cor": "#bbdefb"
+            }
+        ],
+        "direito": [
+            {
+                "id": "dr1",
+                "nome": "Aline Medeiros",
+                "ra": "2024401",
+                "semestre": 1,
+                "cor": "#fff9c4"
+            },
+            {
+                "id": "dr2",
+                "nome": "Bernardo Queiroz",
+                "ra": "2024402",
+                "semestre": 2,
+                "cor": "#c8e6c9"
+            },
+            {
+                "id": "dr3",
+                "nome": "Cristina Veloso",
+                "ra": "2024403",
+                "semestre": 3,
+                "cor": "#bbdefb"
+            }
+        ],
+        "administracao": [
+            {
+                "id": "ad1",
+                "nome": "Aurora Magalhaes",
+                "ra": "2024501",
+                "semestre": 1,
+                "cor": "#fff9c4"
+            },
+            {
+                "id": "ad2",
+                "nome": "Bento Siqueira",
+                "ra": "2024502",
+                "semestre": 2,
+                "cor": "#c8e6c9"
+            },
+            {
+                "id": "ad3",
+                "nome": "Clara Fontes",
+                "ra": "2024503",
+                "semestre": 3,
+                "cor": "#bbdefb"
             }
         ]
     },
