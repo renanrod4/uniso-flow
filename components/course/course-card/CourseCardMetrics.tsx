@@ -27,19 +27,19 @@ export default function CourseCardMetrics({ totalAlunos, totalDisciplinas, taxaO
 				<p className="text-2xl font-semibold leading-none tracking-tight text-course-metric">
 					{numberFormatter.format(totalAlunos)}
 				</p>
-				<p className="mt-1 text-sm text-slate-400">Alunos</p>
+				<p className="mt-1 text-sm text-texto-terciario">Alunos</p>
 			</div>
 			<div>
 				<p className="text-2xl font-semibold leading-none tracking-tight text-course-metric">
 					{totalDisciplinas}
 				</p>
-				<p className="mt-1 text-sm text-slate-400">Disciplinas</p>
+				<p className="mt-1 text-sm text-texto-terciario">Disciplinas</p>
 			</div>
 			<div>
 				<p className={`text-2xl font-semibold leading-none tracking-tight ${occupancyTextClass}`}>
 					{taxaOcupacao}%
 				</p>
-				<p className="mt-1 text-sm text-slate-400">Ocupação</p>
+				<p className="mt-1 text-sm text-texto-terciario">Ocupação</p>
 			</div>
 		</section>
 	);

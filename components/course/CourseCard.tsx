@@ -11,7 +11,7 @@ type CourseCardProps = {
 
 export default function CourseCard({ curso }: CourseCardProps) {
 	return (
-		<article className="rounded-lg border border-slate-200 bg-course-bg p-3 shadow-[0_6px_18px_rgba(15,23,42,0.08)] cursor-pointer transition-all duration-300 hover:shadow-lg ">
+		<article className="rounded-lg border border-borda-principal bg-course-bg p-3 shadow-md cursor-pointer transition-all duration-300 hover:shadow-lg">
 			<CourseCardHeader nome={curso.nome} coordenador={curso.coordenador} />
 			<CourseCardMetrics
 				totalAlunos={curso.totalAlunos}

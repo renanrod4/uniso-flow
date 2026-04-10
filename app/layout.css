@@ -1,58 +1,115 @@
 @config "../tailwind.config.ts";
 @import "tailwindcss";
+
 :root {
-  /* Cores principais */
-  --background: #ffffff;
-  --foreground: oklch(0.145 0 0);
-  --primary: #030213;
-  --primary-foreground: oklch(1 0 0);
-  
-  /* Cores secundárias */
-  --secondary: oklch(0.95 0.0058 264.53);
-  --secondary-foreground: #030213;
-  
-  /* Cards e Popovers */
-  --card: #ffffff;
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  
-  /* Muted (tons suaves) */
-  --muted: #ececf0;
-  --muted-foreground: #717182;
-  
-  /* Accent (destaque) */
-  --accent: #e9ebef;
-  --accent-foreground: #030213;
-  
-  /* Destructive (ações destrutivas) */
-  --destructive: #d4183d;
-  --destructive-foreground: #ffffff;
-  
-  /* Bordas e Inputs */
-  --border: rgba(0, 0, 0, 0.1);
-  --input: transparent;
-  --input-background: #f3f3f5;
-  --switch-background: #cbced4;
-  --ring: oklch(0.708 0 0);
-  
-  /* Gráficos (Charts) */
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  
+  /* Identidade visual Uniso */
+  --uniso-azul-escuro: #1a1a5e;
+  --uniso-azul-medio: #2b3a8e;
+  --uniso-azul-vibrante: #0066ff;
+  --uniso-azul-hover: #3d50b5;
+
+  --uniso-dourado: #f5c518;
+  --uniso-laranja-atencao: #f5a623;
+
+  /* Gradientes */
+  --gradient-sidebar: linear-gradient(180deg, #1a1a5e 0%, #2b3a8e 100%);
+  --gradient-sidebar-hover: linear-gradient(135deg, #2b3a8e, #3d50b5);
+  --gradient-botao-primario: linear-gradient(135deg, #1a1a5e, #2b3a8e);
+  --gradient-login-bg: linear-gradient(135deg, #1a1a5e 0%, #2b3a8e 50%, #1a1a5e 100%);
+
   /* Sidebar */
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #030213;
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-  
-  /* Outros */
-  --radius: 0.625rem;
+  --sidebar-bg: var(--gradient-sidebar);
+  --sidebar-texto-secundario: #93c5fd;
+  --sidebar-texto-inativo: #bfdbfe;
+  --sidebar-hover-bg: rgba(255, 255, 255, 0.1);
+  --sidebar-ativo-bg: rgba(255, 255, 255, 0.2);
+  --sidebar-borda: rgba(255, 255, 255, 0.1);
+
+  /* Status e alertas */
+  --status-critico-cor: #e53935;
+  --status-critico-bg: #fce4ec;
+  --status-atencao-cor: #f5a623;
+  --status-atencao-bg: #fff8e1;
+  --status-ok-cor: #43a047;
+  --status-ok-bg: #e8f5e9;
+  --status-ocioso-cor: #757575;
+  --status-ocioso-bg: #f5f5f5;
+
+  /* Post-its */
+  --postit-amarelo: #fff9c4;
+  --postit-verde: #c8e6c9;
+  --postit-azul: #bbdefb;
+  --postit-rosa: #f8bbd0;
+  --postit-roxo: #e1bee7;
+  --postit-laranja: #ffe0b2;
+  --postit-turquesa: #b2dfdb;
+  --postit-lilas: #d1c4e9;
+
+  /* Lixeira */
+  --trash-normal: #ef9a9a;
+  --trash-hover: #e53935;
+  --trash-bg-normal: rgba(239, 154, 154, 0.1);
+  --trash-bg-hover: rgba(229, 57, 53, 0.1);
+  --trash-borda-normal: #ffcdd2;
+  --trash-borda-hover: #ef5350;
+
+  /* Backgrounds e superficies */
+  --bg-principal: #f9fafb;
+  --bg-card: #ffffff;
+  --bg-input: #f3f3f5;
+  --bg-muted: #ececf0;
+  --bg-hover: #f3f4f6;
+
+  /* Bordas */
+  --borda-principal: #e5e7eb;
+  --borda-input: #d1d5db;
+  --borda-sutil: rgba(0, 0, 0, 0.1);
+  --borda-focus: #3b82f6;
+
+  /* Textos */
+  --texto-principal: #1a1a5e;
+  --texto-secundario: #6b7280;
+  --texto-terciario: #9ca3af;
+  --texto-desabilitado: #d1d5db;
+  --texto-branco: #ffffff;
+  --texto-postit: #333333;
+
+  /* Interacoes */
+  --hover-overlay: rgba(0, 0, 0, 0.05);
+  --focus-ring: rgba(59, 130, 246, 0.5);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  /* Graficos */
+  --chart-barra-primaria: #2b3a8e;
+  --chart-barra-destaque: #f5c518;
+  --chart-grid: #f0f0f0;
+  --chart-eixo: #999999;
+
+  /* Estados especiais */
+  --drag-hover-azul: #3b82f6;
+  --drag-hover-bg: rgba(59, 130, 246, 0.1);
+  --ocupacao-baixa: #43a047;
+  --ocupacao-media: #f5a623;
+  --ocupacao-alta: #e53935;
+
+  /* Raios */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* Aliases de compatibilidade */
+  --background: var(--bg-principal);
+  --foreground: var(--texto-principal);
+  --card: var(--bg-card);
+  --card-foreground: var(--texto-principal);
+  --muted: var(--bg-muted);
+  --muted-foreground: var(--texto-secundario);
+  --border: var(--borda-sutil);
+  --input-background: var(--bg-input);
+  --ring: var(--borda-focus);
+  --radius: var(--radius-md);
 }

@@ -14,7 +14,7 @@ export default async function Home() {
 
 	return (
 		<main className="p-6">
-			<h1 className="text-2xl font-bold">Uniso Flow</h1>
+			<h2 className="text-2xl font-bold text-">Uniso Flow</h2>
 			<p className="mt-1 text-sm text-gray-600">Selecione um curso para visualizar o fluxo acadêmico</p>
 
 			<section className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
