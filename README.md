@@ -18,9 +18,9 @@ A organização baseada exclusivamente em planilhas estáticas enfrenta desafios
 
 ## Objetivos
 
-1. **Previsão de Demanda:** Identificar o número real de alunos aptos para cada disciplina com base no histórico de materias concluidas.
+1. **Previsão de Demanda:** Identificar o número real de alunos aptos para cada disciplina com base no histórico de matérias concluidas.
 2. **Equilíbrio de Carga:** Auxiliar na distribuição eficiente de alunos entre as turmas e horários disponíveis.
-3. **Visibilidade de Fluxo:** Proporciontar uma visão clara e em tempo real do fluxo acadêmico, permitindo identificar gargalos, ociosidade de salas e oportunidades de rebalanceamento.
+3. **Visibilidade de Fluxo:** Proporcionar uma visão clara e em tempo real do fluxo acadêmico, permitindo identificar gargalos, ociosidade de salas e oportunidades de rebalanceamento.
 
 ## Tecnologias
 
